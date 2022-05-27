@@ -4,7 +4,7 @@
     <h1>Les Vaisseaux !</h1>
     <ul>
     {% for ship in ships %}
-        <li><a href="{% url 'ship_detail' ship.slug %}">{{ ship.name }}</a></li>
+        <li><a href="{{ ship.get_absolute_url }}">{{ ship.name }}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}

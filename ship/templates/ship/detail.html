@@ -2,5 +2,5 @@
 
 {% block content %}
     <h1>{{ ship.name }}</h1>
-
+    <p>Constructeur : <a href="{{ ship.manufacturer.get_absolute_url }}">{{ ship.manufacturer.name }}</a></p>
 {% endblock %}

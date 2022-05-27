@@ -1,6 +1,8 @@
 from django.db import models
 from django.urls import reverse
 
+
+
 """
 Fabriquant :
 - Nom
@@ -16,7 +18,7 @@ Fabriquant :
 
 
 class Manufacturer(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100)
     logo = models.ImageField(upload_to='manufacturers/logos/')
     date_created = models.DateField()

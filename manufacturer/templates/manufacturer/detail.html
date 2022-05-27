@@ -4,5 +4,12 @@
     <h1>{{ manufacturer.name }}</h1>
 
     <p>{{ manufacturer.history }}</p>
-
+    <hr>
+    <br>
+    <h2>Liste des vaisseaux</h2>
+    {% for ship in ships %}
+        <ul>
+            <li><a href="{{ ship.get_absolute_url }}">{{ ship.name }}</a></li>
+        </ul>
+    {% endfor %}
 {% endblock %}
