@@ -3,12 +3,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 import accounts.views
-from blog.views import index
+from blog.views import index, import_data
 from mystarcitizen import settings
 
 
 urlpatterns = [
     path('', index, name='index'),
+    path('import/', import_data, name='import'),
     path('deconnexion/', accounts.views.logout_user, name='logout'),
     path('inscription/', accounts.views.register, name='register'),
     path('connexion/', accounts.views.login_view, name='login'),
