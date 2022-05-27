@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ specie.name }}</h1>
+
+    <p>{{ specie.description }}</p>
+    <hr>
+    <br>
+{#    <h2>Liste des espèces</h2>#}
+{#    {% for specie in species %}#}
+{#        <ul>#}
+{#            <li><a href="{{ specie.get_absolute_url }}">{{ specie.name }}</a></li>#}
+{#        </ul>#}
+{#    {% endfor %}#}
+{% endblock %}

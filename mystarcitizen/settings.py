@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'manufacturer',
     'ship',
     'accounts',
+    'species',
 ]
 
 MIDDLEWARE = [

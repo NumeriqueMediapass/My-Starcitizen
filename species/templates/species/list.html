@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Les Espèces !</h1>
+    <ul>
+        {% for specie in species %}
+{#            <li><img src="{{ specie.image.url }}" alt="{{ specie.name }}" style="width: 30px"></li>#}
+            <li><a href="{{ specie.get_absolute_url }}">{{ specie.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

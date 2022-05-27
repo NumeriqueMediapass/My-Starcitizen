@@ -5,6 +5,7 @@
 
     <p>{{ manufacturer.history }}</p>
     <hr>
+    <p>Espèce : <a href="{{ manufacturer.spacie.get_absolute_url }}">{{ manufacturer.spacie.name }}</a></p>
     <br>
     <h2>Liste des vaisseaux</h2>
     {% for ship in ships %}

@@ -13,6 +13,7 @@ urlpatterns = [
     path('inscription/', accounts.views.register, name='register'),
     path('connexion/', accounts.views.login_view, name='login'),
     path('fabriquants/', include('manufacturer.urls')),
+    path('especes/', include('species.urls')),
     path('vaisseaux/', include('ship.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
