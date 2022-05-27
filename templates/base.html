@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Titre</title>
+</head>
+
+<body>
+
+<h1>Star Citizen</h1>
+
+<a href="{% url "index" %}">Accueil</a>
+{% if not user.is_authenticated %}
+    <a href="{% url "register" %}">Inscription</a>
+{% else %}
+    <a href="">{{ user.username}}</a>
+    <a href="{% url 'logout' %}">Déconnexion</a>
+
+{% endif %}
+<a href="{% url "fabriquants" %}">Fabriquants</a>
+<a href="{% url "vaisseaux" %}">Vaisseaux</a>
+{% block content %}
+{% endblock %}
+</body>
+</html>

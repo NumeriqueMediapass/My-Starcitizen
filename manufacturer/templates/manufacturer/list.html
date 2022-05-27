@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Les fabriquant !</h1>
+    <ul>
+        {% for manufacturer in manufacturers %}
+            <li><img src="{{ manufacturer.logo.url }}" alt="{{ manufacturer.name }}" style="width: 30px"></li>
+            <li><a href="{{ manufacturer.get_absolute_url }}">{{ manufacturer.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
